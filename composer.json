@@ -1,0 +1,12 @@
+{
+    "name": "zonuexe/link-poc",
+    "licen": "FSFAP",
+    "require": {
+        "fig/link-util": "^1.1",
+        "psr/link": "^1.0",
+        "rize/uri-template": "^0.3.2"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
