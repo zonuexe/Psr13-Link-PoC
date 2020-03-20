@@ -6,6 +6,11 @@
         "psr/link": "^1.0",
         "rize/uri-template": "^0.3.2"
     },
+    "autoload": {
+        "psr-4": {
+            "zonuexe\\WebLink\\": "src/"
+        }
+    },
     "config": {
         "sort-packages": true
     }
