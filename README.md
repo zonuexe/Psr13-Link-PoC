@@ -29,8 +29,10 @@ This code goes against secure coding best practices. Never search for a string t
 To create a FIG's `Link` object from user input like `$_SERVER['REQUEST_URI']` you need to explicitly escape.
 
 ```php
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
 // Do not use https://www.php.net/urlencode
-$link = new Link('current', strtr($_SERVER['REQUEST_URI'], ['{' => '%7B', '}' => '%7D']));
+$link = new Link('current', strtr($uri, ['{' => '%7B', '}' => '%7D']));
 ```
 
 The same implementation has been [copied to Symfony](https://github.com/symfony/symfony/pull/33122).
